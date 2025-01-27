@@ -33,6 +33,7 @@ def create_app():
         return render_template('index.html')
 
     # Creacion de tablas a partir de los modelos
-    
-    with app.app
+
+    with app.app_context():
+        db.create_all()
     return app
